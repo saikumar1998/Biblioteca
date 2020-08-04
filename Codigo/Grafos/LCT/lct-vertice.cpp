@@ -69,7 +69,7 @@ namespace lct {
 	}
 	int access(int v) {
 		int last = -1;
-		for (int w = v; w+1; update(last = w), splay(v), w = t[v].p)
+		for (int w = v; w+1; update(last = w), splay(v), w = t[w].p)
 			splay(w), t[w].ch[1] = (last == -1 ? -1 : v);
 		return last;
 	}
